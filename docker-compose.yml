@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - OPENWEATHER_API_KEY=${OPENWEATHER_API_KEY}
+    restart: unless-stopped
+  ngrok:
+    image: wernight/ngrok
+    depends_on:
+      - web
+    environment:
+      - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
+    command: http web:5000
+    ports:
+      - "4040:4040"
+    restart: unless-stopped

@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: weather-prediction-web
+    env: python
+    plan: free
+    repo: https://github.com/your-username/weather-prediction2
+    buildCommand: pip install -r requirements.txt
+    startCommand: python backend/app.py
+    envVars:
+      - key: OPENWEATHER_API_KEY
+        fromDatabase: false
+        value: ""
