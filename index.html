@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherWise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+    <header>
+        <h1>🌤️ WeatherWise</h1>
+        <p>AI Weather Prediction</p>
+    </header>
+
+    <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter your city" aria-label="City">
+        <button id="searchBtn">Search</button>
+    </div>
+
+    <section class="weather-card">
+        <p class="location">📍 <span id="city">Salem</span></p>
+        <div class="temperature"><span id="temperature">34</span>°C</div>
+        <p id="condition">Hot & Humid</p>
+
+        <div class="weather-details">
+            <div>
+                💧
+                <b id="humidity">82%</b>
+                <small>Humidity</small>
+            </div>
+            <div>
+                💨
+                <b id="wind">6 m/s</b>
+                <small>Wind</small>
+            </div>
+            <div>
+                🌡️
+                <b id="pressure">1032</b>
+                <small>Pressure</small>
+            </div>
+        </div>
+    </section>
+
+    <section id="forecastContent" class="forecast-card" style="display: none;">
+        <h2>🌦️ 5-Day Forecast</h2>
+        <div class="forecast-list">
+            <div class="forecast-item">
+                <b>Today</b>
+                <span>☀️</span>
+                <strong>32°C</strong>
+                <small>Hot & Humid</small>
+            </div>
+            <div class="forecast-item">
+                <b>Tomorrow</b>
+                <span>🌤️</span>
+                <strong>31°C</strong>
+                <small>Partly Cloudy</small>
+            </div>
+            <div class="forecast-item">
+                <b>Day 3</b>
+                <span>🌧️</span>
+                <strong>29°C</strong>
+                <small>Light Rain</small>
+            </div>
+            <div class="forecast-item">
+                <b>Day 4</b>
+                <span>⛅</span>
+                <strong>30°C</strong>
+                <small>Cloudy</small>
+            </div>
+            <div class="forecast-item">
+                <b>Day 5</b>
+                <span>☀️</span>
+                <strong>33°C</strong>
+                <small>Sunny</small>
+            </div>
+        </div>
+    </section>
+
+    <section class="ai-card">
+        <h2>🤖 AI Prediction</h2>
+        <p>Tomorrow's Prediction</p>
+        <h3 id="prediction">☀️ Hot and Humid</h3>
+        <div class="rain">
+            🌧️ Rain Chance:
+            <b id="rainChance">25%</b>
+        </div>
+    </section>
+
+    <button class="plan-button" id="planButton">⭐ Plan My Day</button>
+
+    <section id="advice" class="advice-card">
+        <h2>💡 Smart Advice</h2>
+        <p>Stay hydrated and avoid prolonged exposure to the afternoon sun.</p>
+    </section>
+
+    <nav>
+        <span class="nav-item" data-target="home">🏠 <small>Home</small></span>
+        <span class="nav-item" data-target="forecast">🌆 <small>Forecast</small></span>
+        <span class="nav-item" data-target="ai">🤖 <small>AI</small></span>
+        <span class="nav-item" data-target="plan">⭐ <small>Plan</small></span>
+    </nav>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
